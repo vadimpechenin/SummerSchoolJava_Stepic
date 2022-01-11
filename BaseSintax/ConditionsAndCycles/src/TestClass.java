@@ -55,7 +55,7 @@ public class TestClass {
 
         // Out 12
         System.out.println(sum);
-        }
+        //}
         // Не знаем сколько цифр вводится,режим интерактива заканчивается при нажатии ctrl+D
         Scanner in2 = new Scanner(System.in);
         int a1, sum1 = 0;
@@ -63,6 +63,20 @@ public class TestClass {
             a1 = in2.nextInt();
             sum1 += a1;
             System.out.print(sum1 + " ");
+        }
+    }
+        //Пример цикла for
+        for (int i = 0; i<10; i++) {
+            System.out.print(i + " ");
+        }
+        System.out.println();
+        for (int i = 9; i>=0; i--){
+            System.out.print(i + " ");
+        }
+        System.out.println();
+        //fori + Tab - кратко преобразуется в базовую конструкцию
+        for (int i = 9; i>=0; i-=3){
+            System.out.print(i + " ");
         }
     }
 }
