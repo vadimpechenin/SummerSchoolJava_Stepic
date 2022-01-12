@@ -78,5 +78,9 @@ public class TestClass {
         for (int i = 9; i>=0; i-=3){
             System.out.print(i + " ");
         }
+        System.out.println();
+        // Цикл по всем элементам
+        int [] array = {1,2,3,4,5,6,7,8,9,10};
+        for(int i : array) System.out.print(i + " "); //переменная i станет экземпляром массива и будет обходить его поэлементно от начала к концу
     }
 }
