@@ -1,18 +1,15 @@
 /*
-Нарушенный порядок
-Дано целое число N, не превосходящее 1000. Далее следуют N целых чисел.
+Ввод строк
+Программа получает на вход строку из 2 слов, разделенных пробелом.
 
-Порядок нарушен тогда, когда среди двух соседних элементов массива левый элемент больше правого.
-
-Программа должна считать количество нарушенных порядков в массиве и выводить это количество на экран.
+Необходимо вывести слово, меньшее в лексикографическом порядке.
 
 Sample Input 1:
 
-5
-2 4 1 9 7
+mother brother
 Sample Output 1:
 
-2
+brother
 */
 
 import java.util.Scanner;
@@ -21,19 +18,14 @@ public class Task5 implements AbstrctTask{
 
     public void calculate(){
         Scanner in = new Scanner(System.in);
-        int n = in.nextInt();
-        int [] arr = new int[n];
+        String s1 = in.next(); // данные до пробела
+        String s2 = in.next();
 
-        for (int i = 0; i<n; i++){
-            arr[i] = in.nextInt();
+        int index = s1.compareTo(s2);
+        if (index >= 0){
+            System.out.println(s2);
+        }else{
+            System.out.println(s1);
         }
-        int sum = 0;
-        for(int i = 0; i < n-1; i++){
-
-            if (arr[i] > arr[i+1]){
-                sum += 1;
-            }
-        }
-        System.out.println(sum);
     }
 }
