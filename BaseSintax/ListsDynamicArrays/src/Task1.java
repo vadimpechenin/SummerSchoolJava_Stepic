@@ -38,4 +38,5 @@ public class Task1 implements AbstrctTask{
             System.out.print(s);
         }
     }
+
 }
