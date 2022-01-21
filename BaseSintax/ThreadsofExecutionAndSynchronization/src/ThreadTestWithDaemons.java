@@ -1,3 +1,5 @@
+
+
 public class ThreadTestWithDaemons implements Runnable{
 
 //    Отдельная группа, в которой будут
