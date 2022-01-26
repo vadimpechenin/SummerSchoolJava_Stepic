@@ -1,42 +1,27 @@
 /*
-Обработка данных массива
-Дано целое число N, не превосходящее 1000. Далее следуют N целых чисел.
-
-Среди всех чисел массива, необходимо вывести на экран двузначные, четные и положительные через пробел.
-
-А если таких чисел в массиве нет, необходимо вывести -1.
+Развлекаемся с суммой
+Реализуйте функцию, возвращающую сумму двух чисел.
+ Менять сигнатуру функции не нужно.
+ Писать что то кроме функции - не нужно!
+ Задумываться о вводе тоже не нужно!
 
 Sample Input 1:
 
-5
-100 96 -2 96 1
+8 11
 Sample Output 1:
 
-96 96
+19
 */
 
 import java.util.Scanner;
 
-public class Task1 implements AbstrctTask{
+public class Task1{
 
-    public void calculate(){
-        Scanner in = new Scanner(System.in);
-        int n = in.nextInt();
-        int [] arr = new int[n];
+    static int sum(int a, int b){
 
-        for (int i = 0; i<n; i++){
-            arr[i] = in.nextInt();
-        }
+        int sum = a + b;
 
-        boolean flag = false;
-        for(int i = 0; i < n; i++){
-            if (arr[i] %2 == 0 && arr[i]>9 && arr[i]<100){
-                System.out.print(arr[i]+ " ");
-                flag = true;
-            }
-        }
-        if (!flag){
-            System.out.print("-1");
-        }
+        System.out.print(sum);
+        return sum;
     }
 }
