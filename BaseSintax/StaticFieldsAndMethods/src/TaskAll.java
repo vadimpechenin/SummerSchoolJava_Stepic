@@ -1,9 +1,9 @@
 //Общий класс для выполнения всех задач
 public class TaskAll {
     public static void main(String[] args){
-//        Task1.sum(8, 11);
+//        Task1.count();
 
-//        Task2.printN(3);
+        Task2.count();
 
         /*int [] array = new int[]{5,1,2,4,3};
         Task3.sort(array);*/
@@ -16,9 +16,6 @@ public class TaskAll {
        /* String string = "aaaaaAAa";
         Task5.isPalindrome(string);*/
 
-        long a = 19;
-        Task6.isPrime(a);
-//        Task6 task = new Task6();
 //        Task7 task = new Task7();
 //        Task8 task = new Task8();
 
