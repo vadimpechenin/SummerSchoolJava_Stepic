@@ -51,7 +51,6 @@ public class Main {
         System.out.println(treeSet + " " + treeSet.size());
         System.out.println(hashSet + " " + hashSet.size());
     }
-
     static void setFunctionTasks(){
 //        Задача на множество - задача сборки алфавита строки
         // Вход - Karl u Klari ukral koralli, a Klara ukrala u Karla klarnet
