@@ -76,8 +76,8 @@ public class Task3 {
         //Множество для номеров школ
         TreeSet<Integer> set = new TreeSet<>();
         for (int i = 0; i < number; i++) {
-            String name = in.next();
             String surname = in.next();
+            String name = in.next();
 //            String fullName = surname+ " " + surname
             int schoolNumber = in.nextInt();
             int gradeMath = in.nextInt();
@@ -110,10 +110,13 @@ public class Task3 {
                 } else if (j < number) {
                     if (pupils.get(j).getSchoolNumber() == pupils.get(j-1).getSchoolNumber()) {
                         numberPupils+=1;
-                        schools.get(i).setGradeMath((schools.get(i).getGradeMath()+pupils.get(j).getGradeMath())/numberPupils);
-                        schools.get(i).setGradeRus((schools.get(i).getGradeRus()+pupils.get(j).getGradeRus())/numberPupils);
-                        schools.get(i).setGradeInf((schools.get(i).getGradeInf()+pupils.get(j).getGradeInf())/numberPupils);
+                        schools.get(i).setGradeMath((schools.get(i).getGradeMath()+pupils.get(j).getGradeMath()));
+                        schools.get(i).setGradeRus((schools.get(i).getGradeRus()+pupils.get(j).getGradeRus()));
+                        schools.get(i).setGradeInf((schools.get(i).getGradeInf()+pupils.get(j).getGradeInf()));
                     }else{
+                        schools.get(i).setGradeMath(schools.get(i).getGradeMath()/numberPupils);
+                        schools.get(i).setGradeRus(schools.get(i).getGradeRus()/numberPupils);
+                        schools.get(i).setGradeInf(schools.get(i).getGradeInf()/numberPupils);
                         schools.get(i).setGradeAll((schools.get(i).getGradeMath()+schools.get(i).getGradeRus()+
                                 schools.get(i).getGradeInf())/3);
                         j--;
@@ -121,6 +124,9 @@ public class Task3 {
                         numberPupils=0;
                     }
                 }else{
+                    schools.get(i).setGradeMath(schools.get(i).getGradeMath()/numberPupils);
+                    schools.get(i).setGradeRus(schools.get(i).getGradeRus()/numberPupils);
+                    schools.get(i).setGradeInf(schools.get(i).getGradeInf()/numberPupils);
                     schools.get(i).setGradeAll((schools.get(i).getGradeMath()+schools.get(i).getGradeRus()+
                             schools.get(i).getGradeInf())/3);
                     break;
